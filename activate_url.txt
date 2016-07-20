@@ -1,0 +1,6 @@
+activate url:
+http://www.tctacc.pe.hu/dispatcher.php?act_type=d4ee0fbbeb7ffd4fd7a7d477a7ecd922&l=www&u=c16a5320fa475530d9583c34fd356ef5
+
+act_type=activate
+u=31
+http://localhost/dispatcher.php?act_type=d4ee0fbbeb7ffd4fd7a7d477a7ecd922&l=www&u=c16a5320fa475530d9583c34fd356ef5

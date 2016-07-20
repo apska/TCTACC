@@ -1,0 +1,67 @@
+<div>
+	<form id="CardsFilter">
+		<div id="PageHeader">
+			<span>Поиск карт</span>
+		</div>
+		<hr/>
+		<div id="FormContent">
+			<div class="row">
+				<div id="labels" class="col2">
+					<span>Персонаж: </span>
+				</div>
+				{SelCharacter}
+			</div>
+			<!-- <div class="row">
+				<div id="labels" class="col2">
+					<span>Название карты: </span>
+				</div>
+				<input type="text" id="card_name" name="card_name"/>
+			</div> -->
+			<div class="row">
+				<div id="labels" class="col2">
+					<span>Редкость: </span>
+				</div>
+				<input type="checkbox" id="bronze" name="bronze"/><label for="bronze">Бронза</label>
+				<input type="checkbox" id="silver" name="silver"/><label for="silver">Серебро</label>
+				<input type="checkbox" id="gold" name="gold"/><label for="gold">Золото</label>
+				<input type="checkbox" id="sr" name="sr"/><label for="sr">SR</label>
+			</div>
+			<div class="row">
+				<div id="labels" class="col2">
+					<span>Количество карт: </span>
+				</div>
+				<select id="eq_card_nb" name="eq_card_nb">
+					<option value="equels">=</option>
+					<option value="more">&gt;</option>
+					<option value="less">&lt;</option>
+					<option value="more_equels">&gt;=</option>
+					<option value="less_equels">&lt;=</option>
+				</select>
+				<input type="text" id="card_nb" name="card_nb"/>
+			</div>
+			<div class="row">
+				<div id="labels" class="col2">
+					<span>Уникальные: </span>
+				</div>
+				<input type="radio" id="inpUniqueAny" name="unique" value="any" checked/><label for="inpUniqueAny">Все</label>
+				<input type="radio" id="inpUniqueNo" name="unique" value="no"/><label for="inpUniqueNo">Нет</label>
+				<input type="radio" id="inpUniqueYes" name="unique" value="yes"/><label for="inpUniqueYes">Да</label>
+			</div>
+			<div class="row">
+				<div id="labels" class="col2">
+					<span>Ограниченные: </span>
+				</div>
+				<input type="radio" id="inpLimitedAny" name="limited" value="any" checked/><label for="inpLimitedAny">Все</label>
+				<input type="radio" id="inpLimitedNo" name="limited" value="no"/><label for="inpLimitedNo">Нет</label>
+				<input type="radio" id="inpLimitedYes" name="limited" value="yes"/><label for="inpLimitedYes">Да</label>
+			</div>
+		</div>
+		<hr/>
+		<div id="btns" class="formBtns">
+			<a class="button" onclick="findCards();" href="javascript:void(0);" onmousedown="$(this).addClass('pressed');" onmouseup="$(this).removeClass('pressed');" onmouseout="$(this).removeClass('pressed');">Найти карты</a>
+			<a class="button" onclick="$('#CardsFilter')[0].reset();" href="javascript:void(0);" onmousedown="$(this).addClass('pressed');" onmouseup="$(this).removeClass('pressed');" onmouseout="$(this).removeClass('pressed');">Сброс</a>
+		</div>
+	</form>
+	<div id="findResult">
+	<div>
+</div>

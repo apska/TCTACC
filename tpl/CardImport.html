@@ -1,0 +1,31 @@
+<div>
+	<form id="CardImport">
+		<div id="PageHeader">
+			<span>Импорт карт</span>
+		</div>
+		<hr/>
+		<div id="FormContent">
+			<div id="radioInps">
+				<input type="radio" id="inpXml" name="ImportType" value="xml" onclick="changeImportType(this);" checked/><label for="inpXml">Текст в формате XML</label>
+				<!-- <input type="radio" id="inpFile" name="ImportType" value="file" onclick="changeImportType(this);"/><label for="inpFile">Файл XML</label>
+				<input type="radio" id="inpJson" name="ImportType" value="json" onclick="changeImportType(this);"/><label for="inpJson">Текст в формате JSON</label> -->
+			</div>
+			<div id="xml">
+				<textarea id="ImportTextXml" name="ImportXmlText" placeholder="Вставьте данные о картах в формате XML."></textarea>
+			</div>
+			<div id="file" class="hidden">
+				<div class="descr">
+					<span>Выберите XML файл с данными о Ваших картах и нажмите на кнопку &#0171;Импортировать карты&#0187;.</span>
+				</div>
+				<input id="ImportFile" type="file" accept="text/xml" name="import">
+			</div>
+			<div id="json" class="hidden">
+				<textarea id="ImportTextJson" name="ImportJsonText" placeholder="Вставьте данные о картах в формате JSON."></textarea>
+			</div>
+		</div>
+		<hr/>
+		<div id="btns" class="formBtns">
+			<a class="button" onclick="importCards();" href="javascript:void(0);" onmousedown="$(this).addClass('pressed');" onmouseup="$(this).removeClass('pressed');" onmouseout="$(this).removeClass('pressed');">Импортировать карты</a>
+		</div>
+	</form>
+</div>

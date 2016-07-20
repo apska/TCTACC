@@ -1,0 +1,57 @@
+div#message{
+	border: 1px solid;
+	border-radius: 7px;
+	height: auto;
+	position: absolute;
+	background-color: #ffffff;
+	overflow: hidden;
+}
+
+div#mes_header{
+	background-image: url("../img/mes_header.png");
+	border-bottom: 1px solid #000000;
+	color: #ffffff;
+	font-weight: bold;
+	height: 25px;
+}
+
+div#mes_header span{
+	margin-left:10px;
+}
+
+div#mes_content{
+	padding: 10px;
+}
+
+div#mes_btns{
+	background-color: #e888bb;
+	border-top: 1px solid;
+	height: 25px;
+	margin-top: 12px;
+	padding-top: 6px;
+	text-align: center;
+}
+
+a.close_btn{
+	background-image: url("../img/close.png");
+	display: block;
+	float: right;
+	height: 16px;
+	margin: 4px;
+	width: 16px;
+}
+
+a.mes_btn{
+	background-color: #e0d636;
+	border: 1px solid;
+	border-radius: 5px;
+	color: #000000;
+	font-size: 15px;
+	padding: 2px 12px;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+a.mes_btn:hover{
+	background-color: #ffff99;
+}

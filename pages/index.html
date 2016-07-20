@@ -1,0 +1,150 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8;"/>
+		<link rel="shortcut icon" type="image/png" href="img/favicon.png"/>
+		<link rel="stylesheet" type="text/css" href="styles/main.css"/>
+		<link rel="stylesheet" type="text/css" href="styles/elements.css"/>
+		<link rel="stylesheet" type="text/css" href="styles/message.css"/>
+		<script type="text/javascript" src="scripts/jquery-2.1.3.min/jquery-2.1.3.min.js"></script>
+		<script type="text/javascript" src="scripts/index.js"></script>
+		<script type="text/javascript" src="scripts/common.js"></script>
+		<script type="text/javascript" src="scripts/errors.js"></script>
+		<title>TCTACC</title>
+	</head>
+	<body>
+		<div id="site">
+			<div id="header">
+			</div>
+			<div id="menu">
+				<ul>
+					<li><a onclick="showAuthForm();" class="button" href="javascript:void(0);" onmousedown="$(this).addClass('pressed');" onmouseup="$(this).removeClass('pressed');" onmouseout="$(this).removeClass('pressed');">Войти</a></li>
+					<li><a onclick="showRegForm();" class="button" href="javascript:void(0);" onmousedown="$(this).addClass('pressed');" onmouseup="$(this).removeClass('pressed');" onmouseout="$(this).removeClass('pressed');">Регистрация</a></li>
+					<li><a onclick="showRecoverPassForm();" class="button" href="javascript:void(0);" onmousedown="$(this).addClass('pressed');" onmouseup="$(this).removeClass('pressed');" onmouseout="$(this).removeClass('pressed');">Восстановить пароль</a></li>
+				</ul>
+			</div>
+			<div id="indexContent">
+				<p>Добро пожаловать на сайт для любителей игры Tekken Card Turnament.</p>
+				<p>Как известно в игре Вы можете создавать новые карты взамен других карт, а так же Вы можете получить нужную карту с помощью слияния карт за кредиты. Если у Вас накопилось в игре довольно много карт, то появляются неудобства связанные с выбором карт для объединения. Потому что окно игры вмещает небольшое количество карт и тяжело держать в уме все возможные варианты для получения новой карты.</p>
+				<p>Сдесь Вы сможете получать информацию по картам имеющимся у Вас в наличии что позволит не потратить лишние кредиты и не потерять более нужные карты.</p>
+				<ul>
+					<li></li>
+				</ul>
+			</div>
+			<div id="authorization" class="hidden">
+				<a onclick="closeWindow();" class="button_close" href="javascript:void(0);"> </a>
+				<form id="authorization_form">
+					<div class="row">
+						<input type="text" name="login" id="login" placeholder="введите логин" autocomplete="off"/>
+					</div>
+					<div class="row">
+						<input type="password" name="password" id="password" placeholder="введите пароль" autocomplete="off"/>
+					</div>
+					<!-- <div class="row">
+						<span>
+							<input type="checkbox" name="remember" id="remember"/>
+							<label class="checkbox_label" for="remember">запомнить меня</label>
+						</span>
+					</div> -->
+					<div class="row">
+						<div class="center">
+							<input type="button" value="Войти" onclick="logIn();"/>
+						</div>
+					</div>
+					<!-- <div class="row">
+						<div class="center">
+							<input type="button" value="Регистрация" onclick=""/>
+						</div>
+					</div> -->
+				</form>
+			</div>
+			<div id="register" class="hidden">
+				<form id="register_form" action="" method="">
+					<div class="row">
+						<div class="col2" id="labels">
+							<label for="regLogin">Ваш Логин: </label>
+						</div>
+						<input type="text" name="regLogin" id="regLogin"/>
+					</div>
+					<div class="row">
+						<div class="col2" id="labels">
+							<label for="regEmail">Ваш E-mail: </label>
+						</div>
+						<input type="text" name="regEmail" id="regEmail"/>
+					</div>
+					<div class="row">
+						<div class="col2" id="labels">
+							<label for="regPassword">Ваш Пароль: </label>
+						</div>
+						<input type="password" name="regPassword" id="regPassword"/>
+					</div>
+					<div class="row">
+						<div class="col2" id="labels">
+							<label for="r_regPassword">Повторите Ваш Пароль: </label>
+						</div>
+						<input type="password" name="r_regPassword" id="r_regPassword"/>
+					</div>
+					<div class="row">
+						<div class="col2" id="labels">
+							<label>Защитный код: </label>
+							<a class="refresh" href="javascript:void(0);" onclick="reloadCaptcha('imgRegCaptcha');" title="Обновить картинку"></a>
+						</div>
+						<img id="imgRegCaptcha" src=""/>
+					</div>
+					<div class="row">
+						<div class="col2" id="labels">
+							<label for="regCaptcha">Введите защитный код: </label>
+						</div>
+						<input type="text" name="regCaptcha" id="regCaptcha"/>
+					</div>
+					<div class="row">
+						<div class="buttons">
+							<input type="button" value="Отмена" onclick="cancelRegistration();"/><input type="button" value="Зарегистрироваться" onclick="register();"/>
+						</div>
+					</div>
+				</form>
+			</div>
+			<div id="recoverPass" class="hidden">
+				<form id="recoverPass_form" action="" method="">
+					<div class="row">
+						<div class="col2" id="labels">
+							<label for="recoverEmail">Ваш E-mail: </label>
+						</div>
+						<input type="text" name="recoverEmail" id="recoverEmail" title="Адрес Вашей электронной почты"/>
+					</div>
+					<div class="row">
+						<div class="col2" id="labels">
+							<label>Защитный код: </label>
+							<a class="refresh" href="javascript:void(0);" onclick="reloadCaptcha('imgRecoverPassCaptcha');" title="Обновить картинку"></a>
+						</div>
+						<img id="imgRecoverPassCaptcha" src="" title="Защитный код"/>
+					</div>
+					<div class="row">
+						<div class="col2" id="labels">
+							<label for="recoverCaptcha">Введите защитный код: </label>
+						</div>
+						<input type="text" name="recoverCaptcha" id="recoverCaptcha" title="Защитный код с картинки"/>
+					</div>
+					<div class="row">
+						<div class="buttons">
+							<input type="button" value="Отмена" onclick="cancelRecoverPass();"/><input type="button" value="Восстановить пароль" onclick="recoverPass();"/>
+						</div>
+					</div>
+				</form>
+			</div>
+			<div id="message" class="hidden">
+				<div id="mes_header">
+					<span>
+						Заголовок
+					</span>
+					<a onclick="closeWindow();" class="close_btn" href="javascript:void(0);"></a>
+				</div>
+				<div id="mes_content">
+					Контент Контент Контент Контент Контент Контент Контент 
+				</div>
+				<div id="mes_btns">
+					<a onclick="" class="mes_btn" href="javascript:void(0);" onmousedown="$(this).addClass('pressed');" onmouseup="$(this).removeClass('pressed');" onmouseout="$(this).removeClass('pressed');">Закрыть</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

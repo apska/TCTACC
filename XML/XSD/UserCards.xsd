@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xsd:element name="userCards">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="item" maxOccurs="unbounded">
+					<xsd:complexType>
+						<xsd:sequence>
+							<xsd:element name="key" minOccurs="0">
+								<xsd:complexType>
+									<xsd:sequence>
+										<xsd:element name="int" type="xsd:int" minOccurs="0"/>
+									</xsd:sequence>
+								</xsd:complexType>
+							</xsd:element>
+							<xsd:element name="value">
+								<xsd:complexType>
+									<xsd:sequence>
+										<xsd:element name="userCard">
+											<xsd:complexType>
+												<xsd:sequence>
+													<xsd:element name="c_id" type="xsd:int"/>
+													<xsd:element name="cha_id" type="xsd:int"/>
+													<xsd:element name="nb" type="xsd:int"/>
+													<xsd:element name="type" type="xsd:boolean" minOccurs="0"/>
+													<xsd:element name="rarity" type="xsd:int" minOccurs="0"/>
+												</xsd:sequence>
+											</xsd:complexType>
+										</xsd:element>
+									</xsd:sequence>
+								</xsd:complexType>
+							</xsd:element>
+						</xsd:sequence>
+					</xsd:complexType>
+				</xsd:element>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+</xsd:schema>

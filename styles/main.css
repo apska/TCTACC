@@ -1,0 +1,345 @@
+html{
+	/* width: 100%;
+	height: 100%;
+	min-width: 1024px; */
+}
+
+body{
+	margin: 0px 0px;
+	background-color : #DFDFDF;
+	/* width: 100%;
+	height: 100%;
+	min-width: 1024px; */
+}
+
+div#site{
+	margin: 0 auto;
+	min-width: 900px;
+	max-width: 900px;
+	/* height: 100%; */
+	background-color: #fffafa;
+}
+
+input[type="button"], input[type="checkbox"], .checkbox_label, #menu li, .sort{
+	cursor: pointer;
+}
+
+.hidden{display: none;}
+
+div#labels.col2{
+	float:left;
+	width:165px;
+}
+
+/* DIV формы регистрации */
+div#register{
+	background-color: #b1e327;
+	border: 2px solid;
+	border-radius: 13px;
+	padding: 8px 8px 0;
+	position: absolute;
+	z-index: 1010;
+}
+
+div.row{
+	margin-top: 5px;
+}
+
+div.buttons{
+	margin-top: 10px;
+	text-align: center;
+}
+
+div.buttons input{
+	margin: 0px 7px;
+}
+
+/* картинка с капчой */
+form img#imgRegCaptcha, form img#imgRecoverPassCaptcha{
+	width: 149px;
+}
+
+/*  нопка обновить капчу */
+a.refresh{
+	background-image: url("../img/refresh.png");
+	background-repeat: no-repeat;
+	display: inline-block;
+	height: 24px;
+  width: 24px;
+	margin-left: 30px;
+}
+
+/* DIV формы авторизации */
+div#authorization{
+	background-color: #b1e327;
+	border: 2px solid;
+	border-radius: 13px;
+	padding: 8px 8px 0;
+	width: 150px;
+	position: absolute;
+	z-index: 1010;
+}
+
+/* ‘орма авторизации */
+form#authorization_form{
+	height: auto;
+	width: 149px;
+}
+
+/* DIV формы регистрации */
+div#register{
+	background-color: #b1e327;
+	border: 2px solid;
+	border-radius: 13px;
+	padding: 8px 8px 0;
+	position: absolute;
+	z-index: 1010;
+}
+
+/* DIV формы восстановлени€ парол€ */
+div#recoverPass{
+	background-color: #b1e327;
+	border: 2px solid;
+	border-radius: 13px;
+	padding: 8px 8px 0;
+	position: absolute;
+	z-index: 1010;
+}
+
+div#header{
+	background-color: #000000;
+	background-image: url("../img/header.png");
+	background-repeat: no-repeat;
+	background-position: center center;
+	height: 100px;
+}
+
+div#menu{
+	border-bottom: solid 1px #000000;
+}
+
+div#menu ul, div#left_menu ul{
+	list-style: none;
+	padding: 0px;
+}
+
+div#menu, .center{
+  text-align:center;
+}
+
+div#menu ul li{
+	display: inline-block;
+	line-height: 20px;
+	padding: 0 10px;
+}
+
+div#left_menu{
+	padding: 0px 10px;
+}
+
+div#left_menu ul li{
+	/* border: 1px solid #000000; */
+	background-color: #cdb5cd;
+	margin-bottom: 3px;
+}
+
+div#left_menu ul li:hover{
+	background-color: #eed2ee;
+}
+
+div#left_menu ul li.selected{
+	background-color: #eed5d2;
+}
+
+div#left_menu ul li a{
+	color: #000000;
+	display: block;
+	padding: 3px 10px;
+	text-decoration: none;
+	/* border: 1px solid; */
+}
+
+div#content{
+	text-align: justify;
+	border: 1px solid;
+	margin-left: 205px;
+	padding: 10px;
+}
+
+.button_close{
+	background-image: url("../img/close.png");
+	display: block;
+	float: right;
+	height: 16px;
+	width: 16px;
+}
+
+div#main_header{
+	background-color: #000000;
+}
+
+div#header_back{
+	margin-right: 200px;
+}
+
+div#header_content{
+	background-color: #000000;
+	height: 100px;
+	background-image: url("../img/header.png");
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+div#loginInfo{
+	background-color: #000000;
+	border: 2px solid #ffffff;
+	border-radius: 11px;
+	float: right;
+	height: 96px;
+	position: relative;
+	right: 0;
+	top: 0;
+	width: 200px;
+	color: #ffffff;
+	font-weight: bold;
+}
+
+div#left_side{
+	border: 1px solid;
+	float: left;
+	width: 200px;
+}
+
+.formBtns{
+	height: 30px;
+	padding: 10px 0px 0px;
+}
+
+.formBtns a.button{
+	margin-right: 10px;
+}
+
+div#PageHeader span{
+	font-size: 25px;
+	font-weight: bold;
+}
+
+div#PageHeader, .descr{
+	margin-bottom: 10px;
+}
+
+div#radioInps{
+	margin-bottom: 10px;
+}
+
+div#xml textarea, div#json textarea{
+	height: 200px;
+	width: 400px;
+}
+
+table{
+	background-color: #ced6d8;
+	border: 1px solid #000000;
+	border-collapse: collapse;
+	text-align: center;
+}
+
+table thead{
+	background-color: #9db4c7;
+	font-weight: bold;
+}
+
+table tbody tr:hover{
+	background-color: #efa0ff;
+}
+
+table tr.even{
+	background-color: #d7d7f5;
+}
+
+table td{
+	border: 1px solid #000000;
+}
+
+table#userCollection td.bronze{
+	background-color: #cc6633;
+	/* border: 2px solid #cc6633; */
+}
+
+table#userCollection td.silver{
+	background-color: #dcdcdc;
+	/* border: 2px solid #dcdcdc; */
+}
+
+table#userCollection td.gold{
+	background-color: #ffd700;
+	/* border: 2px solid #ffd700; */
+}
+
+table#userCollection td.complete{
+	font-weight: bold;
+	font-size: 17px;
+}
+
+/* Окно ожидания */
+div#blockDiv{
+	position: fixed;
+	opacity: 0.6;
+	top: 0;
+	left: 0;
+	background-color: 9c9c9c;
+	width: 100%;
+	height: 100%;
+}
+
+div#waiter{
+	border: 2px solid;
+  border-radius: 8px;
+	position: absolute;
+	background-color: #cccccc;
+	width: 362px;
+	height: 32px;
+	font-size: 21px;
+	padding: 10px 8px 8px;
+}
+
+div#waiter img{
+	vertical-align: middle;
+}
+/* *************** */
+
+select#eq_card_nb{
+	width: 50px;
+	margin-right: 15px;
+}
+
+input#card_nb{
+	width: 100px;
+}
+
+/* pagebar */
+div#pagebar{
+	margin: 10px 0px;
+}
+
+div#pagebar a{
+	border-radius: 8px;
+	color: #000000;
+	background-color: #8db9ee;
+	padding: 2px 5px;
+	text-decoration: none;
+}
+
+div#pagebar a, div#pagebar span#threeDots{
+	margin-right: 5px;
+}
+
+div#pagebar a.sel_page{
+	background-color: #00f000;
+	font-weight: bold;
+}
+
+div#pagebar a:hover{
+	background-color: #00f5ff;
+}
+/* ****** */

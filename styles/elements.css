@@ -1,0 +1,16 @@
+a.button{
+	background-color: #e0d636;
+	border-radius: 5px;
+	color: #000000;
+	font-weight: bold;
+	padding: 5px 15px;
+	text-decoration: none;
+	border: 1px solid;
+}
+
+a.button:hover{
+	background-color: #ffff99;
+}
+.pressed{
+	background-color: #81de2e !important;
+}

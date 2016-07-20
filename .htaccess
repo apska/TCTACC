@@ -1,0 +1,20 @@
+#файл .htaccess
+#Options Indexes FollowSymLinks
+DirectoryIndex index.php
+
+#Настройки PHP
+php_flag short_open_tag off
+#php_flag session.use_cookies off
+#php_flag session.name suid
+
+#для безопасности
+#php_flag allow_url_fopen off
+#php_flag allow_url_include off
+
+#чтобы куки передавались только по http протоколу
+php_flag session.cookie_httponly on
+
+php_flag session.use_only_cookies off
+
+#отключили NOTICE
+#php_value error_reporting E_NONE
